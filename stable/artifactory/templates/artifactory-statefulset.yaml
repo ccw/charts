@@ -66,6 +66,9 @@ spec:
         volumeMounts:
         - name: artifactory-volume
           mountPath: "{{ .Values.artifactory.persistence.mountPath }}"
+    {{- if .Values.artifactory.persistence.subPath }}
+          subPath: "{{ .Values.artifactory.persistence.subPath }}"
+    {{- end }}
     {{- end }}
       - name: "wait-for-db"
         image: "{{ .Values.initContainerImage }}"
