@@ -274,6 +274,7 @@ artifactory:
     ## Requires persistence.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
     # existingClaim:
+    # subPath:
 
     accessMode: ReadWriteOnce
     size: 20Gi
